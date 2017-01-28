@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="/javascript_external/jquery-3.1.1.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <header>
+      This is header
+    </header>
+    <section>
+      <div class="nm-login-cnt">
+        <div class="nm-login-header">
+          <label> Register/Sign In
+        </div>
+        <div class="nm-login-section">
+          <div class="nm-login-tabs">
+            <button class="nm-tab-signin">Sign In</button>
+            <button class="nm-tab-register">Register</button>
+          </div>
+          <div class="nm-signin-cnt">
+            <form method="post" id="signInForm">
+              <div class="nm-label-input">
+                <label for="username">Username </label>
+                <input type="text" name="username" value=""/>
+              </div>
+              <div class="nm-label-input">
+                <label for="password">Password </label>
+                <input type="password" name="password" value=""/>
+              </div>
+              <div class="nm-label-input">
+              <button type="button" name="signin">Sign In</button>
+            </div>
+            </form>
+          </div>
+          <div class="nm-register-cnt">
+            <form method="POST" id="registerForm" action="/">
+              <div class="nm-label-input">
+                <label for="username">Username </label>
+                <input type="text" name="username" value=""/>
+              </div>
+              <div class="nm-label-input">
+                <label for="password">Password </label>
+                <input type="password" name="password" value=""/>
+              </div>
+              <div class="nm-label-input">
+                <label for="confirm_password">Confirm Password </label>
+                <input type="password" name="confirm_password" value=""/>
+              </div>
+              <div class="nm-label-input">
+                <button type="submit" name="register">Register</button>
+              </div>
+            </form>
+          </div>
+          <div class="nm-all-users">
+            <ul>
+            <% users.forEach(function(user) { %>
+              <li><%= user %></li>
+            <% }) %>
+            </ul>
+          </div>
+        </div>
+        <div class="nm-login-footer">
+          Terms and conditions
+        </div>
+      </div>
+    </section>
+    <footer>
+      This is footer
+    </footer>
+  </body>
+  <script src="/javascripts/index.js" charset="utf-8"></script>
+</html>
